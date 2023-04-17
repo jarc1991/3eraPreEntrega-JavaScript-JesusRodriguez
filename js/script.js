@@ -131,6 +131,7 @@ function rendeProducts (arrayDeProductos) {
     })
 
 }
+
 let carritoIndex = document.getElementById("carritoDOM")             
 
                                                                       /*LO ANTERIOR TAMBIÉN SE PUEDE HACER DE LA SIGUIENTE FORMA
@@ -188,7 +189,7 @@ function agregarACarrito (e){
       subtotal: buscadoCarrito.precio,
   })
 
-      localStorage.setItem("carrito",JSON.stringify(carrito))
+      localStorage.setItem("carritoLStorage",JSON.stringify(carrito))
   //}
 
 renderizarCarrito(carrito)
@@ -302,7 +303,7 @@ function confirmar() {
 
     alert("Confirmaste tu compra") //cambiar con sweet alert
     carritoIndex.innerHTML = "" 
-    localStorage.removeItem("carrito") 
+    localStorage.removeItem("carritoLStorage") 
   }
 
 // Función vaciar DOM
@@ -311,7 +312,7 @@ function vaciar() {
 
     alert("Vaciaste el carrito")
     carritoIndex.innerHTML = "" 
-    localStorage.removeItem("carrito")
+    localStorage.removeItem("carritoLStorage")
 
   }
 
